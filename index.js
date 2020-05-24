@@ -3,8 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var http = require('http');
 var fs = require('fs');
-const server = require('http').createServer();
-const io = require('socket.io')(server);
+const io = require('socket.io')(http);
 var mongoose = require('mongoose');
 
 var User = mongoose.model('Users', {
